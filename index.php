@@ -1,39 +1,39 @@
 <?php
-$i = 4;
-if($i > 10){
-    var_dump('bigger');
-} elseif ($i == 10){
-    var_dump('equals');
-} else {
-    var_dump('smaller');
+
+for($i=0;$i<10;$i++){
+    var_dump($i);
 }
 
-$day = (int) date('w', strtoitime('8.09.2025'));
+for($i=9;$i<10;$i++){
+    var_dump($i);
+}
 
-var_dump($day);
+for($i=1;$i<1_000_000;$i*=2){
+    var_dump($i);
+}
 
-switch($day) {
-    case 1:
-        var_dump('Esmaspäev');
-        break;
-    case 2:
-        var_dump('Teisipäe');
-        break;
-    case 3:
-        var_dump('Kolmapäev');
-        break;
-    case 4:
-        var_dump('Neljapäev');
-        break;
-    case 5:
-        var_dump('Reede');
-        break;
-    case 6:
-        var_dump('Laupäev');
-        break;
-    case 7:
-        var_dump('Pühapäev');
-        break;
-    default:
-        var_dump('Imelik päev');
+$start = time();
+$i = 0;
+while(time()<$start+1){
+    $i++;
+}
+var_dump($i);
+
+$i = 10;
+while($i<10){
+    var_dump('WHILE');
+}
+
+do {
+    var_dump('DO');
+} while($i<10);
+
+$array = ['Apples', 'Cherries', 'Pears', 'Apricot'];
+
+foreach($array as $fruit){
+    var_dump($fruit);
+}
+
+foreach($array as $key=>$fruit){
+    var_dump("$key=>$fruit");
 }
