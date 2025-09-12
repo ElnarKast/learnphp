@@ -1,39 +1,35 @@
 <?php
 
-for($i=0;$i<10;$i++){
-    var_dump($i);
+function hello() {
+    var_dump('hello');
 }
 
-for($i=9;$i<10;$i++){
-    var_dump($i);
+hello();
+hello();
+hello();
+hello();
+
+function biggerThanTen($n) {
+    if($n > 10){
+        return 'Bigger';
+    }
+    return 'Smaller';
+    var_dump('asdasdasdasd');
 }
 
-for($i=1;$i<1_000_000;$i*=2){
-    var_dump($i);
+var_dump(biggerThanTen(11));
+var_dump(biggerThanTen(4));
+
+function anything(...$args) {
+    var_dump($args);
+}
+anything(1, 2, 3, 4, 5, 6, 7);
+
+function recursive($n){
+    if($n<10){
+        var_dump($n);
+        recursive($n+1);
+    }
 }
 
-$start = time();
-$i = 0;
-while(time()<$start+1){
-    $i++;
-}
-var_dump($i);
-
-$i = 10;
-while($i<10){
-    var_dump('WHILE');
-}
-
-do {
-    var_dump('DO');
-} while($i<10);
-
-$array = ['Apples', 'Cherries', 'Pears', 'Apricot'];
-
-foreach($array as $fruit){
-    var_dump($fruit);
-}
-
-foreach($array as $key=>$fruit){
-    var_dump("$key=>$fruit");
-}
+recursive(0);
