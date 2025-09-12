@@ -1,35 +1,23 @@
 <?php
 
-function hello() {
-    var_dump('hello');
-}
+class Box {
+    public $width;
+    public $height;
+    public $lenght;
 
-hello();
-hello();
-hello();
-hello();
-
-function biggerThanTen($n) {
-    if($n > 10){
-        return 'Bigger';
-    }
-    return 'Smaller';
-    var_dump('asdasdasdasd');
-}
-
-var_dump(biggerThanTen(11));
-var_dump(biggerThanTen(4));
-
-function anything(...$args) {
-    var_dump($args);
-}
-anything(1, 2, 3, 4, 5, 6, 7);
-
-function recursive($n){
-    if($n<10){
-        var_dump($n);
-        recursive($n+1);
+    public function volume(){
+        return $this->width * $this->height * $this->lenght;
     }
 }
 
-recursive(0);
+$num1 = 1;
+$num2 = $num1;
+$num2 = 2;
+var_dump($num1);
+
+$box1 = new Box();
+$box1->width = 1;
+$box2 = clone $box1;
+$box2 ->width = 2;
+var_dump($box1, $box2);
+var_dump($box1->width);
