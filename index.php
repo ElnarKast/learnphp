@@ -295,6 +295,15 @@
             >
           </p>
         </div>
+<?php include __DIR__ . '/partials/header.php'; ?>
+
+  <main class="container">
+    <?php include __DIR__ . '/partials/hero.php'; ?>
+    <?php include __DIR__ . '/partials/featured.php'; ?>
+   
+    <div class="row g-5">
+      <div class="col-md-8">
+        <?php include __DIR__ . '/partials/posts.php'; ?>
       </div>
       <div class="row mb-2">
         <div class="col-md-6">
@@ -379,6 +388,8 @@
             </div>
           </div>
         </div>
+      <div class="col-md-4">
+        <?php include __DIR__ . '/partials/sidebar.php'; ?>
       </div>
       <div class="row g-5">
         <div class="col-md-8">
@@ -757,3 +768,6 @@
     ></script>
   </body>
 </html>
+    </div>
+  </main>
+<?php include __DIR__ . '/partials/footer.php'; ?>
