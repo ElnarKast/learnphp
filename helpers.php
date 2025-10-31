@@ -1,16 +1,18 @@
 <?php
 
-function dump(...$args)
-{
-    echo '<pre>';
-    var_dump(...$args);
-    echo '</pre>';
-}
+use App\Models\User;
 
-function dd(...$args) {
-    dump(...$args);
-    die;
-}
+// function dump(...$args)
+// {
+//     echo '<pre>';
+//     var_dump(...$args);
+//     echo '</pre>';
+// }
+
+// function dd(...$args) {
+//     dump(...$args);
+//     die;
+// }
 
 function view($viewName, $variables=[]) {
     extract($variables);
